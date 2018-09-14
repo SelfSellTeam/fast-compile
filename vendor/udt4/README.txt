@@ -6,10 +6,11 @@ UDP-based Data Transfer (UDT) Library - version 4
 Author: Yunhong Gu [yunhong.gu @ gmail.com]
 
 UDT version 4 is free software under BSD License. See ./LICENSE.txt.
-
+----------
 ============================================================================
 
 UDT Website:
+
 http://udt.sf.net
 http://sf.net/projects/udt/ 
 
