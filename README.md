@@ -25,7 +25,7 @@ for the development of asynchronous libraries.  Some of the highlights include:
  
   2. build fast-compile library
   ```
-   git clone https://github.com/Achain-Dev/fast-compile.git
+   git clone https://github.com/SelfSell-Team/fast-compile.git
    git checkout static_variant_string_tag
    git submodule update --init --recursive
    cmake .

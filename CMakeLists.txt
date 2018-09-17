@@ -96,7 +96,8 @@ IF( WIN32 )
   set( RPCRT4 Rpcrt4 )
 
   #boost
-  SET(BOOST_ROOT $ENV{BOOST_ROOT})
+#  SET(BOOST_ROOT $ENV{BOOST_ROOT})
+  SET(BOOST_ROOT "/usr/local/boost_1_59_0")
 #  set(Boost_USE_DEBUG_PYTHON ON)
   set(Boost_USE_MULTITHREADED ON)
   set(BOOST_ALL_DYN_LINK OFF) # force dynamic linking for all libraries
