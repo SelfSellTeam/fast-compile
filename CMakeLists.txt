@@ -4,6 +4,8 @@
 PROJECT( fc )
 CMAKE_MINIMUM_REQUIRED( VERSION 2.8.12 )
 
+SET(BOOST_ROOT "/usr/local/boost_1_59_0")
+
 MESSAGE(STATUS "Configuring project fc located in: ${CMAKE_CURRENT_SOURCE_DIR}")
 SET( CMAKE_AUTOMOC OFF )
 
@@ -97,7 +99,6 @@ IF( WIN32 )
 
   #boost
 #  SET(BOOST_ROOT $ENV{BOOST_ROOT})
-  SET(BOOST_ROOT "/usr/local/boost_1_59_0")
 #  set(Boost_USE_DEBUG_PYTHON ON)
   set(Boost_USE_MULTITHREADED ON)
   set(BOOST_ALL_DYN_LINK OFF) # force dynamic linking for all libraries
