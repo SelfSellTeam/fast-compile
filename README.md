@@ -17,16 +17,35 @@ for the development of asynchronous libraries.  Some of the highlights include:
  ===============
   1. install denpendancy packages
   ```
-   sudo apt-get update
-   sudo apt-get install cmake git libreadline-dev uuid-dev g++ zip libssl-dev openssl build-essential python-dev autotools-dev libicu-dev libbz2-dev libboost-dev libboost-all-dev
-   export LC_ALL="en_US.UTF-8"
+	sudo apt-get update
+	sudo apt-get install cmake git libreadline-dev uuid-dev g++ zip libssl-dev openssl build-essential python-dev autotools-dev libicu-dev libbz2-dev libtool 
+	export LC_ALL="en_US.UTF-8"
   ``` 
+  
+   2. install boost 1.59 
+     ```
+	wget  http://sourceforge.net/projects/boost/files/boost/1.59.0/boost_1_59_0.tar.gz
+	tar -zxvf boost_1_59_0.tar.gz
+	cd boost_1_59_0
+	./bootstrap.sh  
+	./b2
 
-
-  2. build fast-compile library
+	mkdir /usr/local/boost_1_59_0
+	mkdir /usr/local/boost_1_59_0/include
+	mkdir /usr/local/boost_1_59_0/lib
+	mkdir /usr/local/boost_1_59_0/lib64
+	cp -rf boost /usr/local/boost_1_59_0/include
+	cp -rf stage/lib/* /usr/local/boost_1_59_0/lib
+	cp -rf stage/lib/* /usr/local/boost_1_59_0/lib64
   ```
-   git clone https://github.com/Achain-Dev/fast-compile.git
-   git checkout static_variant_string_tag
-   git submodule update --init --recursive
-   cmake .
-   make        
+  
+  3. build fast-compile library
+  ```
+	git clone https://github.com/SelfSellTeam/fast-compile.git
+	cd fast-compile/vendor
+	git clone https://github.com/cryptonomex/secp256k1-zkp.git
+	git clone https://github.com/zaphoyd/websocketpp.git
+	cd ../
+	cmake .
+	make
+  ```
